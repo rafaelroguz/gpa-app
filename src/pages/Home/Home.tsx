@@ -18,19 +18,9 @@ import {
 import { columns } from './utils';
 
 const Home: React.FC = () => {
-  const {
-    data: comparativeAnalysisData,
-    isLoading: isLoadingComparativeAnalysisData,
-  } = useGetComparativeAnalysis();
-  const { data: presenceShareData, isLoading: isLoadingPresenceShareData } =
-    useGetPresenceShare();
-  const { data: priceEvolutionData, isLoading: isLoadingPriceEvolutionData } =
-    useGetPriceEvolution();
-
-  const isLoading =
-    isLoadingComparativeAnalysisData ||
-    isLoadingPresenceShareData ||
-    isLoadingPriceEvolutionData;
+  const { data: comparativeAnalysisData } = useGetComparativeAnalysis();
+  const { data: presenceShareData } = useGetPresenceShare();
+  const { data: priceEvolutionData } = useGetPriceEvolution();
 
   const rows: Row[] = useMemo(
     () =>
