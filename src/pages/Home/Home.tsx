@@ -58,7 +58,7 @@ const Home: React.FC = () => {
 
   return (
     <Container>
-      <MainTitle>General Perfomance Analysis</MainTitle>
+      <MainTitle>General Performance Analysis</MainTitle>
       <ChartsContainer>
         <PriceEvolutionSection data={priceEvolutionData} />
         <PresenceShareSection data={presenceShareData} />

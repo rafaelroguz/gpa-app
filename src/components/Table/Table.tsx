@@ -1,5 +1,4 @@
 import React from 'react';
-import { v4 as uuid } from 'uuid';
 import {
   Cell,
   Container,
@@ -38,7 +37,7 @@ const Table: React.FC<Props> = ({ columns, rows }) => {
           {rows.map(({ id, cellData }) => (
             <TableRow key={id}>
               {cellData.map((data) => (
-                <Cell key={uuid()}>{data}</Cell>
+                <Cell key={window.crypto.randomUUID()}>{data}</Cell>
               ))}
             </TableRow>
           ))}
